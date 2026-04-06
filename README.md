@@ -1,5 +1,7 @@
 # LoveIt Theme | Hugo
 
+> Fork note: this repository is maintained at `rmigacz/LoveIt` as a customization-friendly fork of `dillonzq/LoveIt` for a calmer technical blog reading experience.
+
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/dillonzq/LoveIt?style=flat-square)](https://github.com/dillonzq/LoveIt/releases)
 [![Hugo](https://img.shields.io/badge/Hugo-%5E0.128.0-ff4088?style=flat-square&logo=hugo)](https://gohugo.io/)
 [![License](https://img.shields.io/github/license/dillonzq/LoveIt?style=flat-square)](https://github.com/dillonzq/LoveIt/blob/master/LICENSE)
@@ -12,6 +14,22 @@ English README | [简体中文说明](https://github.com/dillonzq/LoveIt/blob/ma
 > **LoveIt** is a **clean**, **elegant** but **advanced** blog theme for [Hugo](https://gohugo.io/).
 
 It is based on the original [LeaveIt Theme](https://github.com/liuzc/LeaveIt) and [KeepIt Theme](https://github.com/Fastbyte01/KeepIt).
+
+## About This Fork
+
+This fork tracks upstream `dillonzq/LoveIt` and keeps a deliberately small customization layer for personal-blog use.
+
+Current fork-specific changes:
+
+* reduced motion on page titles and code-copy feedback
+* cleaner heading and table-of-contents markers
+* calmer interaction details inspired by the reading-focused feel of PaperMod
+
+Recommended maintenance workflow:
+
+* keep `upstream` pointed at `dillonzq/LoveIt`
+* keep fork-specific UI changes in small, reviewable commits
+* rebase or merge upstream selectively, then verify with a Hugo build
 
 Since the three themes have a similar look, if you have questions about their differences,
 read [Why choose LoveIt](#why-choose-loveit) so that you can choose the one that works best for you.
@@ -32,6 +50,7 @@ Compared to the original LeaveIt theme and the KeepIt theme, the LoveIt theme ha
 * A lot of **style detail adjustments,** including color, font size, margins, code preview style
 * More readable **dark mode**
 * Some beautiful **CSS animations**
+* Easy to customize for a more static, low-motion reading experience
 * Easy-to-use and self-expanding **table of contents**
 * More **social links**, **share sites** and **comment system**
 * **Search** supported by [Lunr.js](https://lunrjs.com/) or [algolia](https://www.algolia.com/)

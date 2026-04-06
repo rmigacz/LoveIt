@@ -9,14 +9,14 @@
     font-size: var(--toc-content-font-size);
 
     ul {
-      text-indent: -0.85rem;
-      padding-left: .8rem;
+      text-indent: 0;
+      padding-left: 0;
       list-style: none;
 
       a:first-child::before {
-        content: "|";
+        content: "";
         font-weight: bolder;
-        margin-right: .5rem;
+        margin-right: 0;
         color: $single-link-color;
 
         [theme=dark] & {

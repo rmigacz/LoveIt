@@ -455,11 +455,22 @@ class Theme {
                 const $code = $codeBlock.querySelector('code');
                 $copy.setAttribute('data-clipboard-text', $code.innerText);
                 const clipboard = new ClipboardJS($copy);
-                const $codeLines = $code.querySelectorAll('span.cl');
                 clipboard.on('success', _e => {
-                    if ($codeLines) {
-                        Util.forEach($codeLines, $codeLine => Util.animateCSS($codeLine, 'animate__flash'))
-                    }
+                    const $icon = $copy.querySelector('i');
+                    if (!$icon || $copy.dataset.copied === 'true') return;
+
+                    const previousClassName = $icon.className;
+                    const previousTitle = $copy.getAttribute('title');
+                    $copy.dataset.copied = 'true';
+                    $copy.setAttribute('title', 'Copied');
+                    $icon.className = 'fas fa-check';
+
+                    window.setTimeout(() => {
+                        $icon.className = previousClassName;
+                        if (previousTitle) $copy.setAttribute('title', previousTitle);
+                        else $copy.removeAttribute('title');
+                        delete $copy.dataset.copied;
+                    }, 1200);
                 });
             }
         });

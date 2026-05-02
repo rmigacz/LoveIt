@@ -480,7 +480,7 @@ class Theme {
         for (let num = 1; num <= 6; num++) {
             Util.forEach(document.querySelectorAll('.single .content > h' + num), $header => {
                 $header.classList.add('headerLink');
-                $header.insertAdjacentHTML('afterbegin', `<a href="#${$header.id}" class="header-mark"></a>`);
+                $header.insertAdjacentHTML('beforeend', `<a href="#${$header.id}" class="header-mark"></a>`);
             });
         }
     }
